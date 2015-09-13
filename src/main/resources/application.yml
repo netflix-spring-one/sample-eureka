@@ -3,4 +3,4 @@ spring:
 security.basic.enabled: false
 netflix:
   appinfo.name: ${spring.application.name}
-server.port: 8080
+server.port: 8671
