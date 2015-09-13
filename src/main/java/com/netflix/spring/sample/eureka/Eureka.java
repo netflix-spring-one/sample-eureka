@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package com.netflix.spring.eureka;
+package com.netflix.spring.sample.eureka;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
