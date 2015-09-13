@@ -1,0 +1,33 @@
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+        classpath 'io.spring.gradle:dependency-management-plugin:0.5.2.RELEASE'
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:latest.release'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'spring-boot'
+
+group = 'com.netflix.spring'
+
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
+
+repositories {
+    jcenter()
+    maven { url 'http://repo.spring.io/snapshot' }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-netflix:1.1.0.BUILD-SNAPSHOT'
+    }
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+}
