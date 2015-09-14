@@ -4,3 +4,9 @@ security.basic.enabled: false
 netflix:
   appinfo.name: ${spring.application.name}
 server.port: 9000
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
